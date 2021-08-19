@@ -1,15 +1,16 @@
-const changeStr = (str) => {
-    let strSplit = str.split("");
+const changeStr = (str = "") => {
+    let strSplit = str.toLowerCase().split(""); //disecting the variable for more specific examination
     console.log(strSplit);
-    let i = 0;
-    
-    
-    /*if(str.charAt(0) === strSplit[0]){
-        // console.log(str.replace(str.charAt(0), "("));
 
-    }*/
+    for(i = 0; i < str.length; i++){ 
+        for(j = 0; j < str.length; j++){
+            if(str.charAt(j) === strSplit[i]){
+                strSplit[i] = strSplit[i].replace(str.charAt(i), "(");
+            }
+        }
+    }
+    return strSplit.join("");
 }
-
-changeStr("Hola");
+console.log(changeStr("caro"));
 
 
