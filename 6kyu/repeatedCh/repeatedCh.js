@@ -1,4 +1,4 @@
-const changeStr = (str = "") => {
+const changeStr = (str = "") => { //not solved
     let strSplit = str.split(""); //disecting the variable for more specific examination
 
     for(i = 0; i < str.length; i++){ 
